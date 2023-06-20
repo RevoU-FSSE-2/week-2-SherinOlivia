@@ -1,0 +1,93 @@
+html {
+    font-family: "noah-regular", "system-ui",
+    "-apple-system", "Segoe UI", "Roboto", "STHeiti SC",
+    "Microsoft YaHei","Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    color: azure;
+}
+
+body {
+    background-image: url("images/Shackles.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+  }
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 52px;
+    border-bottom: 2px solid #222222;
+    background-color: black;
+    opacity: 0.75;
+  }
+
+  .navBar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  nav ul {
+    margin-left: auto;
+    margin-right: 16px;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav span img {
+    height: 32px;
+    width: auto;
+    padding: 8px;
+  }
+  
+.ptnBanner img {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+ .chiefIntro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    grid-auto-rows: 240px 240px 240px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .chiefIntro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .chiefIntro #chiefEntrance {
+    grid-column: 1;
+    grid-row: 2;
+    height: 200%;
+  }
+  
+  .gamePlay img {
+    width: 50%;
+    height: 20%;
+    object-fit: cover;
+  }
+
+  .galleryAndTrailer img {
+    display: grid;
+    grid-row: 2;
+    grid-column: 2;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
