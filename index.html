@@ -6,28 +6,32 @@
     <title>Roo's PtN Fanproject</title>
     <link rel="icon" type="image/x-icon" href="images/apple-touch-icon.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <!-- NEED RESPONSIVE LECTURESSSSS -->
     <nav>
-        <span class="mobileDimension">
-            <img
-                src="images/red-hamburger-button.png" alt="Hamburger Icon"/>
+        <div>
+            <span class="mobileDimension container">
+                <img src="images/red-hamburger-button.png" alt="Hamburger Icon"/>
                 <!-- hammburger button still unfunctional -->
-        </span>
-        <span class="navBar">
-            <a href="#home" class="pageLogo"><img src="images/PtNLogo.png" alt="Path to Nowhere Logo"/></a>
-            <em class="navBar">Roo's FanProject</em>
-        </span>
-        <ul class="desktopDimension">
+            </span>
+            <span class="navBar">
+                <a href="#home" class="pageLogo"><img src="images/PtNLogo.png" alt="Path to Nowhere Logo"/></a>
+                <em class="navBar">Roo's FanProject</em>
+            </span>
+        </div>
+        <div>
+            <ul class="desktopDimension">
             <!-- add hover (a minimum of changing colour) -->
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#chief">Chief</a></li>
-            <li><a href="#gameplay">Gameplay</a></li>
-            <li><a href="#bureauIntel">Bureau Intel</a></li>
-            <li><a href="#contacts">Contact</a></li>
-        </ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#chief">Chief</a></li>
+                <li><a href="#gameplay">Gameplay</a></li>
+                <li><a href="#bureauIntel">Bureau Intel</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <header class="ptnBanner">
@@ -40,11 +44,26 @@
             <h2>How Much do You Remember of Your Past ?</h2>
             <!-- grid layout for the photos in this section -->
                 <div class="gridLayout1">
-                    <img src="images/ChiefDream.jpg" alt="A snippet of Chief's Dream before Forced Awakening"/>
-                    <img src="images/ChiefLangley.jpg" alt="Chief threatened by Langley for mission accomplishment"/>
-                    <img src="images/ChiefShackle.jpg" alt="Chief activating the shackles"/>
-                    <img src="images/ChiefSuspectR.jpg" alt="Chief caught by Suspect R"/>
-                    <img src="images/ChiefEntrance.jpg" id="chiefEntrance" alt="Chief's Entrance Post Forced Awakening"/>
+
+                    <div id="chiefEntrance">
+                        <img src="images/ChiefEntrance.jpg" alt="Chief's Entrance Post Forced Awakening" /> 
+                    </div>
+
+                    <div id="chiefDream">
+                        <img src="images/ChiefDream.jpg" alt="A snippet of Chief's Dream before Forced Awakening"/>
+                    </div>
+
+                    <div id="chiefLangley">
+                        <img src="images/ChiefLangley.jpg" alt="Chief threatened by Langley for mission accomplishment"/>
+                    </div>
+
+                    <div id="chiefShackle">
+                        <img src="images/ChiefShackle.jpg" alt="Chief activating the shackles"/>
+                    </div>
+
+                    <div id="chiefSuspectR">
+                        <img src="images/ChiefSuspectR.jpg" alt="Chief caught by Suspect R"/>
+                    </div>
                 </div>
                 <!-- Chief's Entrance go 2 row on the left side -->
         </section>
@@ -52,29 +71,30 @@
             <!-- the pic and the phrases should be alternating each other
             like a zig zag -->
             <h2>The Truth Awaits Nobody</h2>
-                <figure>
-                    <img src="images/Parma.jpg" alt="Sneaky Parma" />
-                    <figcaption> <em>Mysterious</em> Parma </figcaption>
-                </figure>
-                <p>
-                    <em>Do you have what it takes to uncover the truth?</em>
-                </p>
+                <div class="storyline">
+                    <figure>
+                        <img src="images/Parma.jpg" alt="Sneaky Parma" />
+                        <figcaption> <em>Mysterious</em> Parma </figcaption>
+                    </figure>
+                    <span class="storylineText"><em>Do you have what it takes to uncover the truth?</em></span>
+                </div>
 
-                <p>
+                <div class="battle">
                     <b>Use whatever means you have to accomplish your mission.</b>
-                </p>
-                <figure>
-                    <img src="images/ZoyaShackled.jpg" alt="Forced Collaboration between Chief and Zoya" />
-                    <figcaption> <em>Kill</em> or be <em>Killed</em> </figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/MrFoxInterrogation.jpg" alt="Mr.Fox's Interrogation" />
-                    <figcaption> Interrogation </figcaption>
-                </figure>
-                <p>
+                    <figure>
+                        <img src="images/ZoyaShackled.jpg" alt="Forced Collaboration between Chief and Zoya" />
+                        <figcaption> <em>Kill</em> or be <em>Killed</em> </figcaption>
+                    </figure>
+                </div>
+                <div class="interrogation">
+                    <figure>
+                        <img src="images/MrFoxInterrogation.jpg" alt="Mr.Fox's Interrogation" />
+                        <figcaption> Interrogation </figcaption>
+                    </figure>
+                    <p>
                     <strong><em>Friend </em> or <em>Foe?</em> You decide. </strong>
-                </p>
+                    </p>
+                </div>
 
         </section>
         <section class="galleryAndTrailer">
@@ -96,8 +116,6 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
             gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
-    </main>
-    <footer>
         <section id="formField">
             <form action="#" method="POST"> 
                 <fieldset>
@@ -154,6 +172,8 @@
                 <button type="submit">Submit</button>
             </form>
         </section>
+    </main>
+    <footer>
         <section id="downloadLinks">
         <a href="https://apps.apple.com/us/app/path-to-nowhere/id1606685106" >
             <img src="images/downloadapplestore.png" alt="AppleStore" />
