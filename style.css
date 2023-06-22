@@ -177,9 +177,9 @@ h1 {
       padding-left: 5vw;
       padding-right: 5vw;
     }
-        .slideshowGallery {
+        /* .slideshowGallery {
           display: none;
-        }
+        } */
 
         .prev, .next {
           cursor: pointer;
