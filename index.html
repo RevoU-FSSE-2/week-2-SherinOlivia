@@ -68,55 +68,104 @@
                 </div>
             </div>
     </section>
-        <section class="gamePlay">
+        <section id="gamePlay">
             <!-- the pic and the phrases should be alternating each other
             like a zig zag -->
             <h2>The Truth Awaits Nobody</h2>
-                <div class="storyline">
-                    <figure>
-                        <img src="images/Parma.jpg" alt="Sneaky Parma" />
-                        <figcaption> <em>Mysterious</em> Parma </figcaption>
-                    </figure>
-                    <span class="storylineText"><em>Do you have what it takes to uncover the truth?</em></span>
+                <div class="storyLine">
+                    <div class="storylineImage">
+                        <figure>
+                            <img src="images/Parma.jpg" alt="Sneaky Parma" />
+                            <figcaption> <em>Mysterious</em> Parma </figcaption>
+                        </figure>
+                    </div>
+                    <div class="storylineText"><em>Do you have what it takes to uncover the truth?</em></div>
                 </div>
 
                 <div class="battle">
-                    <b>Use whatever means you have to accomplish your mission.</b>
-                    <figure>
-                        <img src="images/ZoyaShackled.jpg" alt="Forced Collaboration between Chief and Zoya" />
-                        <figcaption> <em>Kill</em> or be <em>Killed</em> </figcaption>
-                    </figure>
+                    <div class="battleImage">
+                        <figure>
+                            <img src="images/ZoyaShackled.jpg" alt="Forced Collaboration between Chief and Zoya" />
+                            <figcaption> <em>Kill</em> or be <em>Killed</em> </figcaption>
+                        </figure>
+                    </div>
+                    <div class="battleText"><b>Use whatever means you have to accomplish your mission.</b></div>
                 </div>
+
                 <div class="interrogation">
-                    <figure>
-                        <img src="images/MrFoxInterrogation.jpg" alt="Mr.Fox's Interrogation" />
-                        <figcaption> Interrogation </figcaption>
-                    </figure>
-                    <p>
-                    <strong><em>Friend </em> or <em>Foe?</em> You decide. </strong>
-                    </p>
+                    <div class="interrogationImage"
+                        <figure>
+                            <img src="images/MrFoxInterrogation.jpg" alt="Mr.Fox's Interrogation" />
+                            <figcaption> Interrogation </figcaption>
+                        </figure>
+                    </div>
+                    <div class="interrogationText"><strong><em>Friend </em> or <em>Foe?</em> You decide. </strong></div>
                 </div>
 
         </section>
-        <!-- <section class="galleryAndTrailer">
+        <section class="galleryAndTrailer">
             <h2>BUREAU Intel</h2>
-              ////full screen rotated pics : need more info 
-                <img src="images/GraySinner.jpg" alt="Gray Sinner" />
-                <img src="images/Iron.jpg" alt="Iron" />
-                <img src="images/99.jpg" alt="99" />
-                <img src="images/HecateNightmare.jpg" alt="Hecate & Nightmare" />
-                <img src="images/Hamel.jpg" alt="Hamel" />
-                <img src="images/TheLegion.jpg" alt="The Legion" />
-                <img src="images/Zoya.jpg" alt="Zoya" />               
+              <!-- Slideshow Photos  -->
+              <div class="slideshowContainer">
+
+                <div class="slideshowGallery fade">
+                    <div class="picNumber">1/ 7</div>
+                    <img src="images/GraySinner.jpg" alt="Gray Sinner" />
+                </div>
+
+                <div class="slideshowGallery fade">
+                    <div class="picNumber">2/ 7</div>
+                    <img src="images/Iron.jpg" alt="Iron" />
+                </div>
+
+                <div class="slideshowGallery fade">
+                    <div class="picNumber">3/ 7</div>
+                    <img src="images/99.jpg" alt="99" />
+                </div>
+
+                <div class="slideshowGallery fade">
+                    <div class="picNumber">4/ 7</div>
+                    <img src="images/HecateNightmare.jpg" alt="Hecate & Nightmare" />
+                </div>
+
+                <div class="slideshowGallery fade">
+                    <div class="picNumber">5/ 7</div>
+                    <img src="images/Hamel.jpg" alt="Hamel" />
+                </div>
+
+                <div class="slideshowGallery fade">
+                    <div class="picNumber">6/ 7</div>
+                    <img src="images/TheLegion.jpg" alt="The Legion" />
+                </div>
+
+                <div class="slideshowGallery fade">
+                    <div class="picNumber">7/ 7</div>
+                    <img src="images/Zoya.jpg" alt="Zoya" />               
+                </div>
+                <!-- next & prev buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              </div>
+                <!-- quick buttons to get to certain pics -->
+              <div class="slideshowCurrent">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+              </div>
 
             <h2>[REDACTED]</h2>
-            //////need to put the video in the middle
+            <!-- need to put the video in the middle -->
             <iframe width="560" height="315" 
             src="https://www.youtube.com/embed/aJb2Xp30PBo" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
             gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section> -->
+        </section> 
         <!-- <section id="formField">
             <form action="#" method="POST"> 
                 <fieldset>

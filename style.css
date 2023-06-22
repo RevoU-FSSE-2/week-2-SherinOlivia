@@ -67,11 +67,12 @@ h1 {
     font-size: 5.5vw;
 }
 
-.chiefIntro h2 {
+.chiefIntro h2, #gamePlay h2, .galleryAndTrailer h2 {
   display: flex;
   justify-content: center;
   font-size: 3.5vw;
-  margin-top: 15px;
+  margin-top: 1vw;
+  margin-bottom: 1.5vw;
 }
 
 .gridContainer {
@@ -127,40 +128,102 @@ h1 {
           grid-row-end: 5;
         }
 
-  .gamePlay h2 {
-    display: flex;
-    justify-content: center;
-    font-size: 3.5vw;
-    margin-top: 15px;
+  #gamePlay {
+    padding: 5vw;
   }
- 
+   
+    #gamePlay img {
+      width: 35%;
+      object-fit: cover;
+      flex-grow: 2;
+    }
 
- .gamePlay img {
-    width: 50%;
-    height: 20%;
-    object-fit: cover;
-  }
+        .storyLine, .interrogation {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+        }
 
-  .storylineText {
-    display: flex;
-    flex-wrap: wrap;
-  }
+            .storylineText, .interrogationText {
+              position: relative;
+              padding-left: 5vw;
+            } 
 
-  .galleryAndTrailer img {
-    display: grid;
-    grid-row: 2;
-    grid-column: 2;
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-  }
+            .storyLine figcaption, .interrogation figcaption {
+              margin-inline-start: 12.5em;
+            }
+            
+      .battle {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          align-items: center;
+      }
+               
+            .battleText {
+              position: absolute;
+              padding-right: 5vw;
+            } 
+    
+            .battle figcaption {
+              margin-inline-start: 12.5em;
+            }
+            
+    .slideshowContainer {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+        .slideshowGallery {
+          display: none;
+        }
+
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 1vw;
+          color: aliceblue;
+          font-weight: bold;
+          font-size: medium;
+          user-select: none;
+        }
+
+        .next {
+          right: 0;
+        }
+
+        .picNumber {
+          color: #8c8a8a;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        .slideshowCurrent {
+          text-align: center;
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
 
   fieldset {
     display: block;
     justify-content: center;
   } */
 
-  #downloadLinks {
+  section #downloadLinks {
     display: flex;
     justify-content: center;
     align-items: center;
