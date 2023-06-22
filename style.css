@@ -1,21 +1,22 @@
-* {
+*,*::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
+    box-sizing: border-box;
     font-family: "noah-regular", "system-ui",
     "-apple-system", "Segoe UI", "Roboto", "STHeiti SC",
     "Microsoft YaHei","Helvetica Neue", "Helvetica", "Arial", "sans-serif";
     color: azure;
+    font-size: 60%;
 }
 
 body {
     background-image: url("images/Shackles.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    margin: 0;
   }
 
 nav {
@@ -54,60 +55,96 @@ nav {
   }
   
 .ptnBanner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    padding: 0%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vw;
 }
 
 h1 {
     text-align: center;
+    font-size: 5.5vw;
 }
 
-.chiefIntro {
+.chiefIntro h2 {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  font-size: 3.5vw;
+  margin-top: 15px;
 }
 
- .gridLayout1 {
-    display: grid;
-    grid-row: 3;
-    grid-column: 3;
-    grid-template-columns: 50% 25% 25%;
-    grid-template-rows: 25% 25%;
+.gridContainer {
+  width: 75%;
+  margin: 2rem auto;
+}
+    .gridLayout1 {
+      display: grid;
+      grid-template-columns: 8, 1fr;
+      grid-template-rows: 5, 5vw;
+      grid-gap: 1.5rem;
+    }
+
+      .gridLayout1-imgs {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+        .chiefEntrance {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 5;
+        }
+
+        .chiefDream {
+          grid-column-start: 3;
+          grid-column-end: 5;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        .chiefLangley {
+          grid-column-start: 3;
+          grid-column-end: 5;
+          grid-row-start: 3;
+          grid-row-end: 5;
+        }
+
+        .chiefShackle {
+          grid-column-start: 5;
+          grid-column-end: 8;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        .chiefSuspectR {
+          grid-column-start: 5;
+          grid-column-end: 8;
+          grid-row-start: 3;
+          grid-row-end: 5;
+        }
+
+  .gamePlay h2 {
+    display: flex;
     justify-content: center;
-    margin-top: 5%;
-  }
-
-  .chiefIntro img {
-    width: 75%;
-    height: 50%;
-    object-fit: cover;
-  }
-
-  #chiefEntrance {
-    display: grid;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-
-  h2 {
-    text-align: center;
+    font-size: 3.5vw;
+    margin-top: 15px;
   }
  
 
-  .gamePlay img {
+ .gamePlay img {
     width: 50%;
     height: 20%;
     object-fit: cover;
   }
 
-  /* .storylineText {
+  .storylineText {
     display: flex;
     flex-wrap: wrap;
-  } */
+  }
 
   .galleryAndTrailer img {
     display: grid;
@@ -121,4 +158,14 @@ h1 {
   fieldset {
     display: block;
     justify-content: center;
+  } */
+
+  #downloadLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65%;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }

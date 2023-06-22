@@ -1,5 +1,20 @@
 @media screen and (min-width: 768px) {
+    html {
+        font-size: medium;
+    }
+
+    nav {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
     .mobileDimension {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desktopDimension {
         display: none;
     }
 }
