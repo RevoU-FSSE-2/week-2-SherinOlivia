@@ -61,16 +61,16 @@ nav {
     display: inline-block;
   }
 
-  .desktopDimension li a:link {
+  .desktopDimension li a {
+    :link {
     color: antiquewhite;
-  }
-
-.desktopDimension li a:visited {
-    color: rgb(177, 45, 12);
-  }
-
-  .desktopDimension li a:hover {
-    color: rgb(49, 13, 131);
+    }
+    :visited {
+      color: rgb(177, 45, 12);
+    }
+    :hover {
+      color: rgb(49, 13, 131);
+    }
   }
 
   nav span img {
