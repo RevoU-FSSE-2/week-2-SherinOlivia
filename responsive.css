@@ -23,4 +23,8 @@
     .prev, .next {
         font-size: 18px;
     }
+
+    iframe {
+        width: 560;
+    }
 }

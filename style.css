@@ -30,21 +30,27 @@ nav {
     height: 52px;
     border-bottom: 2px solid #222222;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
   }
 
     .logo {
       display: flex;
     }
+
     /* Mobile Dimension */
-    .mobileDimension {
+    .mobile-dimension {
       display: inline;
     }
 
     .desktop-dimension {
         display: none;
+        position: relative;
+        overflow: hidden;
+        overflow-y: auto;
+        height: 100%;
     }
 
-    .navBar {
+    .nav-bar {
       display: flex;
       align-items: center;
       justify-content: left;
@@ -53,6 +59,7 @@ nav {
       position: relative;
     }
 
+
     nav ul {
       margin-left: auto;
       margin-right: 16px;
@@ -60,6 +67,14 @@ nav {
 
     nav ul li {
       display: inline-block;
+    }
+
+    nav ul li a {
+      transition: color 0.2s ease-in-out;
+      letter-spacing: 1px;
+      :hover {
+        font-weight: bolder;
+      }
     }
 
     .desktop-dimension li {
@@ -93,9 +108,6 @@ nav {
   width: 100%;
   height: 100%;
   overflow: auto;
-  body.blur {
-    filter: blur(5px);
-  }
 }
 
     .about-author-reveal {
@@ -121,7 +133,8 @@ nav {
       text-decoration: none;
       cursor: pointer;
     }
-.ptnBanner {
+
+.ptn-banner {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -135,7 +148,7 @@ h1 {
     font-size: 3.5vw;
 }
 
-.chiefIntro h2, #gamePlay h2, .gallerySlideshow h2, .trailer {
+.chief-intro h2, #gamePlay h2, .gallery-slideshow h2, .trailer {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
@@ -144,61 +157,61 @@ h1 {
   padding-bottom: 1.5vw;
 }
 
-.gridContainer {
+.grid-container {
   width: 75%;
   margin: 2rem auto;
 }
-    .gridLayout1 {
+    .grid-layout1 {
       display: grid;
       grid-template-columns: 8, 1fr;
       grid-template-rows: 5, 5vw;
       grid-gap: 1.5rem;
     }
 
-      .gridLayout1-imgs {
+      .grid-layout1-imgs {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
+        display: flex;
         transition: transform 1s;
         filter: grayscale(2);
         padding: 1vw;
       }
 
-      .gridLayout1-imgs:hover {
+      .grid-layout1-imgs:hover {
         transform: scale(1.25);
         filter:grayscale(0)
       }
 
-        .chiefEntrance {
+        .chief-entrance {
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row-start: 1;
           grid-row-end: 5;
         }
 
-        .chiefDream {
+        .chief-dream {
           grid-column-start: 3;
           grid-column-end: 5;
           grid-row-start: 1;
           grid-row-end: 2;
         }
 
-        .chiefLangley {
+        .chief-langley {
           grid-column-start: 3;
           grid-column-end: 5;
           grid-row-start: 3;
           grid-row-end: 5;
         }
 
-        .chiefShackle {
+        .chief-shackle {
           grid-column-start: 5;
           grid-column-end: 8;
           grid-row-start: 1;
           grid-row-end: 2;
         }
 
-        .chiefSuspectR {
+        .chief-suspectR {
           grid-column-start: 5;
           grid-column-end: 8;
           grid-row-start: 3;
@@ -210,31 +223,38 @@ h1 {
   }
    
     #gamePlay img {
-      width: 35%;
+      width: 35vw;
       object-fit: cover;
-      flex-grow: 2;
+      flex-grow: 1;
     }
 
-        .storyLine, .interrogation {
+    #gamePlay figure figcaption {
+      font-size: 1vw;
+    }
+        .story-line, .interrogation {
           display: flex;
           align-items: center;
-          flex-direction: row;
-          justify-content: space-between;
-        }
+          justify-content: space-evenly;
 
-            .storylineImage, .interrogationImage {
+        }
+            .storyline-text, .interrogation-text {
+              padding-right: 5vw;
+            }
+            
+            .storyline-image, .interrogation-image {
               display: flex;
               align-items: center;
+              justify-content: center;
             } 
 
-            .battleImage {
+            .battle-image {
               display: flex;
               align-items: center;
               flex-direction: row-reverse;
               justify-content: space-between;
             } 
 
-            .storyLine figcaption, .interrogation figcaption {
+            .story-line figcaption, .interrogation figcaption {
               margin-inline-start: 12.5em;
               font-size: 1.75vw;
             }
@@ -244,70 +264,115 @@ h1 {
               font-size: 1.75vw;
             }
             
-    .slideshowContainer {
-      max-width: 100%;
-      position: relative;
-      margin: auto;
-      padding-left: 5vw;
-      padding-right: 5vw;
+.slideshow-container {
+  max-width: 90vw;
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding-left: 5vw;
+}
+    .slideshow-gallery {
+      display: none
     }
-        .slideshowGallery img {
-          display: hidden;
-          vertical-align: middle;
-        }
 
-        .prev, .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          margin-top: -22px;
-          padding: 1vw;
-          color: aliceblue;
-          font-weight: bold;
-          font-size: 11px;
-          user-select: none;
-        }
+    .slideshow-gallery img {
+      width: 80vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: 22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
 
-        .next {
-          right: 0;
-        }
+    /* Position the "next button" to the right */
+    .prev {
+      left: 5.5vw;
+      border-radius: 3px 0 0 3px;
+    }
+    .next {
+      right: 0.25vw;
+      border-radius: 3px 0 0 3px;
+    }
 
-        .picNumber {
-          color: #8c8a8a;
-          font-size: 12px;
-          padding: 8px 12px;
-          position: absolute;
-          top: 0;
-        }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
 
-        .slideshowCurrent {
-          text-align: center;
-          cursor: pointer;
-          height: 15px;
-          width: 15px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
+    /* Number text (1/7 - 7/7) */
+    .pic-number {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* bullets links to each pic */
+    .dots {
+      text-align: center;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-flex;
+      align-self: center;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
 
  .trailer {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 2vw;
   }
-   
+
   fieldset {
     margin: 0 auto;
     text-align: left;
     padding: 2.5vw 5vw;
-    width: 400px;
+    max-width: 500px;
     border: 1px solid rgb(219, 201, 201);
     border-radius: 5%;
     font-family: "Caveat";
     font-size: 1.25vw;
-    padding-bottom: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1.5vw;
     ::placeholder {
       font-family: "Caveat";
     }
@@ -315,6 +380,7 @@ h1 {
 
   button {
     display: flex;
+    top: 1vw;
     justify-content: center;
     margin: 0 auto;
     text-align: left;
@@ -323,11 +389,20 @@ h1 {
     font-size: 16px;
   }
 
-  .downloadLinks, .creditAISNO {
+  .download-links, .credit-AISNO {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 65%;
     height: 65%;
-    padding: 2vw 5vw;
+    padding: 2vw 50%
+  }
+
+  #contactsAuthor {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1.25vw;
+    padding-bottom: 1.5vw;
+    padding-right: 1.5vw;
   }
