@@ -11,10 +11,16 @@
     .mobileDimension {
         display: none;
     }
-}
 
-@media screen and (max-width: 768px) {
     .desktopDimension {
-        display: none;
+        display: inline;
+    }
+
+    .slideshowGallery {
+        max-width: 500px;
+    }
+    
+    .prev, .next {
+        font-size: 18px;
     }
 }
