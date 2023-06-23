@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="images/apple-touch-icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
 </head>
 <body>
     <!-- NEED RESPONSIVE LECTURESSSSS -->
@@ -20,15 +21,49 @@
             </span>
         </div>
         <div>
-            <ul class="desktopDimension">
+            <ul class="desktop-dimension">
             <!-- add hover (a minimum of changing colour) -->
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about" data-reveal-id="aboutAuthor">About</a></li>
                 <li><a href="#chief">Chief</a></li>
-                <li><a href="#gameplay">Gameplay</a></li>
-                <li><a href="#bureauIntel">Bureau Intel</a></li>
-                <li><a href="#contacts">Contact</a></li>
+                <li><a href="#gamePlay">Gameplay</a></li>
+                <li><a href="#bureauGallery">Bureau Intel</a></li>
+                <li><a href="#burgerSidebar">Contact</a></li>
             </ul>
+        </div>
+        <div class="burger-sidebar" id="burgerSidebar">
+            <button onClick="siderbar-Close()" class="sidebar-links">Close X</button>
+            <a href="https://discord.com/users/shxdxr#7539" target="_blank">
+                <img src="images/discordlogo.png" class="discordLogo" alt="discord"/>
+            </a>
+            <a href="https://instagram.com/shxdxr?igshid=MzRlODBiNWFlZA==" target="_blank">
+                <img src="images/instagramlogo.png" class="instagramLogo" alt="instagram"/>
+            </a>
+            <a href="https://www.linkedin.com/in/sherin-olivia-07311127a/" target="_blank">
+                <img src="images/linkedinlogo.png" class="linkedLogo" alt="linkedin"/>
+            </a>
+        </div>
+
+        <div id="about">
+            <div class="about-author-reveal" id="aboutAuthor">
+                <h2>About</h2>
+                <p>
+                Hello Guys! I'm Roo~ or you may know me by my <em>real</em> name 
+                Sherin Olivia.</p>
+                <p> 
+                This is a fanproject dedicated to my favourite mobile game, 
+                <strong>Path to Nowhere!</strong></p>
+                <p>A humble effort to show my immense love and respect
+                for the game and the dev team! (and ofc also for the weekly assignment <s>of death</s>)
+                </p>
+                <p>
+                In the not-so-near-future, I plan to remake this fan project to showcase my growth
+                as a future Software Engineer! Please enjoy whatever is currently available here.
+                Cheers!</p> 
+                <p>[Don't forget to check the game out!]
+                </p>
+                <a href="#" class="close-about-author">x</a>
+            </div>
         </div>
     </nav>
 
@@ -101,7 +136,7 @@
                 </div>
 
         </section>
-        <!-- <section class="gallerySlideshow>
+        <!-- <section class="gallerySlideshow" id="bureauGallery">
             <h2>BUREAU Intel</h2>
 
               <div class="slideshowContainer">
@@ -154,17 +189,18 @@
                 <span class="dot" onclick="currentSlide(5)"></span>
                 <span class="dot" onclick="currentSlide(6)"></span>
                 <span class="dot" onclick="currentSlide(7)"></span>
-              </div> -->
-
-            <h2 class="trailer">[REDACTED]</h2>
+              </div> 
+        </section> -->
+        <section class="trailer">
+            <h2>[REDACTED]</h2>
             <!-- need to put the video in the middle -->
-            <iframe width="560" height="315" 
+            <iframe width="560" height="315"
             src="https://www.youtube.com/embed/aJb2Xp30PBo" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
             gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section> 
-        <!-- <section id="formField">
+        </section>       
+        <section id="formField">
             <form action="#" method="POST"> 
                 <fieldset>
                     <legend>Visitor Box</legend>
@@ -217,20 +253,20 @@
                               id="photo" required
                               accept="image/png, image/jpeg"/>
                 </fieldset>
-                <button type="submit">Submit</button>
-            </form> -->
+                <button type="submit" onclick="whySubmit()">Submit</button>
+            </form>
         </section>
     </main>
     <footer>
-        <section id="downloadLinks">
+        <section class="downloadLinks">
         <a href="https://apps.apple.com/us/app/path-to-nowhere/id1606685106" >
-            <img src="images/downloadapplestore.png" id="downloadLinks" alt="AppleStore" />
+            <img src="images/downloadapplestore.png" alt="AppleStore" />
         </a>
         <a href="https://play.google.com/store/apps/details?id=com.zy.wqmt.global" >
-            <img src="images/downloadplaystore.png" id="downloadLinks" alt="PlayStore" />
+            <img src="images/downloadplaystore.png" alt="PlayStore" />
         </a>
         </section>
-        <section id="creditAISNO">
+        <section class="creditAISNO">
         © <a href="#"><img src="images/AISNOlogo.png" alt="AISNO Games"/> </a>
         </section>
         <!-- still need more links (author socmed and AISNO official links)-->
