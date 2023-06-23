@@ -364,7 +364,7 @@ h1 {
 
   fieldset {
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
     padding: 2.5vw 5vw;
     max-width: 500px;
     border: 1px solid rgb(219, 201, 201);
@@ -378,6 +378,9 @@ h1 {
     }
   }
 
+    fieldset legend {
+      font-size: 4vw;
+    }
   button {
     display: flex;
     top: 1vw;
@@ -393,11 +396,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65%;
-    height: 65%;
+    width: 35vw;
+    height: 30vw;
     padding: 2vw 50%
   }
-
+  .download-links img {
+    width: 35vw;
+    height: auto;
+  }
   #contactsAuthor {
     display: flex;
     align-items: center;
