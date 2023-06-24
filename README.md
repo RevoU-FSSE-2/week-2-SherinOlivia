@@ -12,7 +12,7 @@
 <p>In the future, I hope to continuously update or remake this fanproject as the means to check and show my progress in my learning journey to become Software Engineer!</p>
 
 ### <b>A Preview!</b>
-<img src="/week-2-SherinOlivia/images/ptnfanproject.jpeg" alt="Header's Web Capture!"/>
+<img src="https://github.com/RevoU-FSSE-2/week-2-SherinOlivia/blob/main/images/ptnfanproject.jpeg" alt="Header's Web Capture!"/>
 
 ## <b>Featured :</b>
 <ol>
